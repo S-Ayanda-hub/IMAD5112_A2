@@ -5,13 +5,89 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ss_background"
     tools:context=".ScoreActivity">
 
     <TextView
-        android:id="@+id/resultTextf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="197dp" />
+        android:id="@+id/resultText"
+        android:layout_width="209dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="9dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalFeedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalFeedback"
+        android:layout_width="227dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Reviews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <Button
+        android:id="@+id/btnReview"
+        android:layout_width="274dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#1C2664"
+        android:text="Review all questions"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reviews"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/Reviews"
+        android:layout_width="264dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="40dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnReview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalFeedback" />
+
+    <ScrollView
+        android:layout_width="319dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnReview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalFeedback">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
