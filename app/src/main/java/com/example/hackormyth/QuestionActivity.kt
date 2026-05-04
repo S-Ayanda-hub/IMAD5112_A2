@@ -11,7 +11,6 @@ class QuestionActivity : AppCompatActivity() {
 
     private lateinit var flashcard: TextView
     private lateinit var feedback: TextView
-    private lateinit var questionNumber: TextView
     private lateinit var btnHack: Button
     private lateinit var btnMyth: Button
     private lateinit var btnNext: Button
@@ -69,8 +68,6 @@ class QuestionActivity : AppCompatActivity() {
         feedback.text = ""
         answered = false
 
-        questionNumber.text = "Question ${currentIndex + 1}/${questions.size}"
-
         btnHack.isEnabled = true
         btnMyth.isEnabled = true
     }
@@ -81,11 +78,10 @@ class QuestionActivity : AppCompatActivity() {
         val correctAnswer = answers[currentIndex]
 
         if (userAnswer == correctAnswer) {
-            feedback.text = "Correct! That's a real time-saver!"
+            feedback.text = getString(R.string.feedbacktxt)
             score++
         } else {
-            val correctText = if (correctAnswer) "Hack" else "Myth"
-            feedback.text = "Wrong! You’ve got to improve your knowledge!"
+            feedback.text = getString(R.string.wrongAnswertxt)
         }
 
         btnHack.isEnabled = false
@@ -95,13 +91,12 @@ class QuestionActivity : AppCompatActivity() {
     private fun goToScoreScreen() {
 
         var totalQuestions = 0
-        for (q in questions) {
-            totalQuestions++
-        }
+        for (q: String in questions) totalQuestions++
 
         val intent = Intent(this, ScoreActivity::class.java)
         intent.putExtra("score", score)
         intent.putExtra("total", totalQuestions)
         startActivity(intent)
+        finish()
     }
 }

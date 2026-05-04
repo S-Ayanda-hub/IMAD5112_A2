@@ -113,9 +113,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/startIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="startIcon"
         app:layout_constraintBottom_toBottomOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="@+id/btnStart"
         app:layout_constraintHorizontal_bias="0.247"

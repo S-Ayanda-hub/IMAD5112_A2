@@ -12,7 +12,7 @@ class ScoreActivity : AppCompatActivity() {
     private lateinit var resultText: TextView
     private lateinit var totalFeedback: TextView
     private lateinit var reviewsText: TextView
-    private lateinit var btnReview: Button
+    private lateinit var btnReplay: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,12 +22,12 @@ class ScoreActivity : AppCompatActivity() {
         resultText = findViewById(R.id.resultText)
         totalFeedback = findViewById(R.id.totalFeedback)
         reviewsText = findViewById(R.id.Reviews)
-        btnReview = findViewById(R.id.btnReview)
+        btnReplay = findViewById(R.id.btnReplay)
 
         val score = intent.getIntExtra("score", 0)
         val total = intent.getIntExtra("total", 0)
 
-        resultText.text = "Your Score: $score / $total"
+        resultText.text = getString(R.string.your_score, score, total)
 
         val percentage = if (total > 0) (score * 100) / total else 0
 
@@ -51,7 +51,7 @@ class ScoreActivity : AppCompatActivity() {
 
         reviewsText.text = reviewText
 
-        btnReview.setOnClickListener {
+        btnReplay.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             startActivity(intent)
             finish()
