@@ -1,6 +1,4 @@
 # Hack or Myth – Quiz App
-
-## Overview
 Hack or Myth is an interactive Android quiz application that challenges users to determine whether statements are real-life hacks or urban myths. The app uses a flashcard-style interface with immediate feedback to create an engaging learning experience.
 
 ## Features
@@ -31,12 +29,6 @@ Hack or Myth is an interactive Android quiz application that challenges users to
 - Intents for activity navigation
   
 
-## App Structure
-MainActivity        → Welcome Screen  
-QuestionActivity    → Quiz Logic and Interaction  
-ScoreActivity       → Results and Feedback  
-
-
 ## Key Concepts Implemented
 - Arrays (`questions[]`, `answers[]`)  
 - Loops (for-each loop)  
@@ -48,13 +40,22 @@ ScoreActivity       → Results and Feedback
 ## Screenshots
 
 <p align="center">
+### Welcome Screen
+<img width="277" height="491" alt="image" src="https://github.com/user-attachments/assets/4a5b6010-6cdf-4aa2-a3b5-5a3bd57e012e" />
+
+### Question Screen
+<img width="222" height="495" alt="image" src="https://github.com/user-attachments/assets/d5884eaf-829b-4b8c-b795-868a316b5453" />
+
+### Score Screen
+<img width="223" height="489" alt="image" src="https://github.com/user-attachments/assets/e80a93e7-d6fb-42bc-9e5d-c8a59ab09c36" />
 
 
 ## How to Run
+1. Clone the repository 
 1. Open the project in Android Studio  
 2. Build the project  
 3. Run on an emulator or Android device  
-4. Tap "Start" to begin the quiz
-   
+4. Tap "Start" to begin the quize
 
-.
+## Demo Video
+
