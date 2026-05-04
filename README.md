@@ -39,7 +39,6 @@ Hack or Myth is an interactive Android quiz application that challenges users to
 
 ## Screenshots
 
-<p align="center">
 ### Welcome Screen
 <img width="277" height="491" alt="image" src="https://github.com/user-attachments/assets/4a5b6010-6cdf-4aa2-a3b5-5a3bd57e012e" />
 
@@ -51,7 +50,7 @@ Hack or Myth is an interactive Android quiz application that challenges users to
 
 
 ## How to Run
-1. Clone the repository 
+1. Clone the repository https://github.com/S-Ayanda-hub/IMAD5112_A2.git
 1. Open the project in Android Studio  
 2. Build the project  
 3. Run on an emulator or Android device  
